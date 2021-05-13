@@ -44,7 +44,7 @@ function gradeQuiz(candidateAnswers) {
   for(let i = 0; i < questions.length ; i ++){
     console.log(`\n${questions[i]}\nYour Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]}`)
         
-    if (candidateAnswers[i] === correctAnswers[i].toLowerCase()) {
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
       numberOfCorrectAnswers+=1
     } else{
     
