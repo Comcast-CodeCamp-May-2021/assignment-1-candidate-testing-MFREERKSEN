@@ -11,7 +11,8 @@ let questions = [
 "1) Who was the first American woman in space? ",
 "2) True or false: 5000 meters == 5 kilometer? ",
 "3) (5 + 3)/2 * 10 = ? ",
-"4) Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ","5) What is the minimum crew size for the ISS? "
+"4) Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
+"5) What is the minimum crew size for the ISS? "
 ];
 let correctAnswers = [
 "Sally Ride",
@@ -33,8 +34,10 @@ function askQuestion() {
     candidateAnswers.push(input.question(questions[i]));
   }
 }
+
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+  let grade = 0
   for(let i = 0; i < questions.length ; i ++){
         console.log(`\n${questions[i]}\nYour Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]}`)
         
@@ -49,7 +52,7 @@ function gradeQuiz(candidateAnswers) {
         }
       
       
-let grade =(numberOfCorrectAnswers/questions.length)*100
+  grade =(numberOfCorrectAnswers/questions.length)*100
   console.log
   (`>>> Overall Grade: ${grade} % (${numberOfCorrectAnswers} of ${questions.length}) <<<`);
   if (grade >= 80){
