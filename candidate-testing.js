@@ -58,7 +58,7 @@ let grade =(numberOfCorrectAnswers)/(questions.length)*100+'%'
     console.log(">>> Status: FAILED <<<");
   
 }
-  return grade 
+  return grade+"%"
   
 }
 function runProgram() {
