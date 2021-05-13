@@ -28,10 +28,10 @@ function askForName(){
 }
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  for(let i = 0; i < questions.length;i++)
+  for(let i = 0; i < questions.length;i++){
   
     candidateAnswers.push(input.question(questions[i]));
- 
+  }
 }
 function gradeQuiz() {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
@@ -49,16 +49,16 @@ function gradeQuiz() {
         }
       
       
-let grade =(numberOfCorrectAnswers)/(questions.length)*100+'%'
+let grade =(numberOfCorrectAnswers/questions.length)*100
   console.log
-  (`>>> Overall Grade: ${grade} (${numberOfCorrectAnswers} of ${questions.length}) <<<`);
+  (`>>> Overall Grade: ${grade} % (${numberOfCorrectAnswers} of ${questions.length}) <<<`);
   if (grade >= 80){
     console.log (">>> Status: PASSED <<<");
   }else{
     console.log(">>> Status: FAILED <<<");
   
 }
-  return grade+"%"
+  return grade
   
 }
 function runProgram() {
