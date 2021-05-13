@@ -38,7 +38,7 @@ function gradeQuiz() {
   for(let i = 0; i < questions.length ; i ++){
         console.log(`\n${questions[i]}\nYour Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]}`)
         
-        if (candidateAnswers[i] === correctAnswers[i]) {
+        if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()) {
           numberOfCorrectAnswers+=1
           
           
@@ -66,7 +66,7 @@ function runProgram() {
   // TODO 1.1c: Ask for candidate's name //
   console.log(`Candidate Name: ${candidateName}\n`)
   askQuestion();
-  gradeQuiz(this.candidateAnswers.toUpperCase());
+  gradeQuiz(this.candidateAnswers);
 }
 
 
